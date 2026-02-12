@@ -1,0 +1,55 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-tertiary: #202225;
+  --bg-secondary: #2f3136;
+  --bg-primary: #36393f;
+  --bg-modifier-hover: #32353b;
+  --bg-modifier-active: #393c43;
+  --bg-modifier-selected: #393c43;
+  --text-normal: #dcddde;
+  --text-muted: #72767d;
+  --header-primary: #ffffff;
+  --header-secondary: #b9bbbe;
+  --interactive-normal: #b9bbbe;
+  --interactive-hover: #dcddde;
+  --interactive-active: #ffffff;
+  --blurple: #7289da;
+  --green: #43b581;
+  --yellow: #faa61a;
+  --red: #f04747;
+  --grey: #747f8d;
+}
+
+body {
+  font-family: 'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: var(--bg-tertiary);
+  color: var(--text-normal);
+  overflow: hidden; /* Prevent body scroll, handle in components */
+}
+
+/* Custom Scrollbar - Discord Style */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: #2f3136;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #2f3136;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #202225;
+  border-radius: 4px;
+}
+
+/* Specific overrides for the server list which has no visible track usually */
+.server-scroller::-webkit-scrollbar {
+  width: 0px;
+  display: none;
+}
